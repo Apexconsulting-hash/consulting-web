@@ -3,193 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APEX | Premium Consulting & Strategy</title>
+    <title>APEX | Enterprise Operations & Strategic Systems Consulting</title>
     <style>
-        /* Base Themes & Reset */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        /* Base Themes & Dark Mode Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
-            background-color: #0d0d0d; 
-            color: #f5f5f5; 
-            line-height: 1.6; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #0a0a0a; 
+            color: #e2e8f0; 
+            line-height: 1.7; 
         }
+        
+        /* Premium Accent Text */
+        .gold-text { color: #e5c158; }
         
         /* Navigation */
         nav {
-            background-color: rgba(27, 27, 27, 0.95);
-            border-bottom: 1px solid #3a311a;
+            background-color: rgba(13, 13, 13, 0.95);
+            border-bottom: 1px solid #262115;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 20px 0;
+            backdrop-filter: blur(10px);
         }
         .nav-container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 30px;
+        }
+        .nav-logo {
+            font-weight: 800; 
+            color: #e5c158; 
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+            text-decoration: none;
         }
         .nav-links a {
-            color: #9e9e9e;
+            color: #a0aec0;
             text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            margin-left: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
         .nav-links a:hover { color: #e5c158; }
 
-        /* Hero Section */
+        /* Hero Showcase Section */
         .hero {
-            padding: 180px 20px 80px 20px;
+            padding: 200px 20px 120px 20px;
             text-align: center;
-            background: radial-gradient(circle, #1b1b1b 0%, #0d0d0d 100%);
-            border-bottom: 1px solid #3a311a;
+            background: linear-gradient(180deg, rgba(27,27,27,0.4) 0%, rgba(10,10,10,1) 100%), 
+                        radial-gradient(circle, rgba(229,193,88,0.07) 0%, rgba(0,0,0,0) 70%);
+            border-bottom: 1px solid #262115;
         }
         .hero-logo-img {
-            max-width: 320px; /* Increased size for a bolder look */
+            max-width: 320px;
             width: 100%;
             height: auto;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             border-radius: 50%;
-            box-shadow: 0 0 35px rgba(229, 193, 56, 0.25);
+            box-shadow: 0 0 50px rgba(229, 193, 56, 0.2);
+            transition: transform 0.5s ease;
         }
         .hero h1 {
             font-family: 'Times New Roman', serif;
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: #ffffff;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            font-weight: 400;
         }
-        .hero h1 span { color: #e5c158; }
         .hero p {
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-            color: #9e9e9e;
-            font-size: 1.15rem;
+            max-width: 750px;
+            margin: 0 auto 40px auto;
+            color: #a0aec0;
+            font-size: 1.25rem;
+            font-weight: 300;
         }
         .cta-btn {
             display: inline-block;
-            background-color: #e5c158;
-            color: #0d0d0d;
+            background: linear-gradient(135deg, #e5c158 0%, #b89632 100%);
+            color: #0a0a0a;
             text-decoration: none;
-            padding: 14px 35px;
-            font-weight: bold;
+            padding: 16px 40px;
+            font-weight: 700;
             border-radius: 4px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: transform 0.2s;
+            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 20px rgba(229, 193, 56, 0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .cta-btn:hover { transform: scale(1.03); }
+        .cta-btn:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(229, 193, 56, 0.4);
+        }
 
-        /* Content Sections (Stripe Compliance) */
-        .container {
-            max-width: 850px;
+        /* General Section Structure */
+        .section-wrapper {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 90px 30px;
         }
-        section { margin-bottom: 50px; }
-        h2 {
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-header h2 {
             font-family: 'Times New Roman', serif;
             color: #e5c158;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            border-left: 3px solid #e5c158;
-            padding-left: 15px;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
-        ul, ol { padding-left: 20px; margin-bottom: 20px; color: #9e9e9e; }
-        li { margin-bottom: 10px; }
-        strong { color: #ffffff; }
-        
-        .highlight-box {
-            background-color: #1b1b1b;
-            border: 1px solid #3a311a;
-            padding: 20px;
-            border-radius: 6px;
-            margin-top: 25px;
+        .section-header p {
+            color: #a0aec0;
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
 
-        /* Footer */
+        /* Creative 3-Column Service Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background-color: #121212;
+            border: 1px solid #1a1a1a;
+            border-top: 3px solid #e5c158;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #e5c158;
+        }
+        .service-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            filter: grayscale(40%) brightness(80%);
+            transition: filter 0.3s;
+        }
+        .service-card:hover .service-card-img {
+            filter: grayscale(0%) brightness(95%);
+        }
+        .service-card-content {
+            padding: 30px;
+        }
+        .service-card-content h3 {
+            color: #ffffff;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-family: 'Times New Roman', serif;
+        }
+        .service-card-content p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* How We Work / Process Timeline Grid */
+        .process-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .process-left {
+            flex: 1;
+            min-width: 300px;
+        }
+        .process-right {
+            flex: 1;
+            min-width: 300px;
+        }
+        .process-image {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #262115;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .step-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 45px;
+        }
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            background-color: #e5c158;
+            color: #0a0a0a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .step-item h4 {
+            color: #ffffff;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+        .step-item p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        /* Stripe Compliance Highlight Container */
+        .compliance-wrapper {
+            background: linear-gradient(135deg, #121212 0%, #0a0a0a 100%);
+            border: 1px solid #262115;
+            border-radius: 8px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+        .compliance-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .compliance-block {
+            flex: 1;
+            min-width: 280px;
+        }
+        .compliance-block h3 {
+            color: #e5c158;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 0.5px;
+        }
+        .compliance-block p {
+            color: #a0aec0;
+            font-size: 0.95rem;
+        }
+
+        /* Global Divider Rule */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, #262115 50%, rgba(0,0,0,0) 100%);
+        }
+
+        /* Footer Structural Details */
         footer {
             background-color: #050505;
-            border-top: 1px solid #1b1b1b;
-            padding: 40px 20px;
+            border-top: 1px solid #121212;
+            padding: 50px 20px;
             text-align: center;
             font-size: 0.9rem;
-            color: #757575;
+            color: #4a5568;
         }
+        footer p { margin-bottom: 8px; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <span style="font-weight: bold; color: #e5c158; letter-spacing: 1px;">APEX CONSULTING</span>
+            <a href="#" class="nav-logo">APEX CONSULTING</a>
             <div class="nav-links">
                 <a href="#services">Services</a>
-                <a href="#process">How We Work</a>
-                <a href="#terms">Terms & Policies</a>
+                <a href="#process">Framework</a>
+                <a href="#governance">Terms & Billing</a>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <img src="detailed_medallion.jpeg" alt="Apex Consulting Premium Medallion Logo" class="hero-logo-img">
-        <h1>Elevate Your Business To <span>The Apex</span></h1>
-        <p>Bespoke operational consulting and digital optimization strategies designed exclusively for scaling enterprises.</p>
-        <a href="mailto:support@apexconsulting-hash.com" class="cta-btn">Book A Consultation</a>
+        <h1>Elevate Your Business To <span class="gold-text">The Apex</span></h1>
+        <p>Architecting enterprise structural scale, optimizing data stack workflows, and introducing sustainable digital transformation models for industry-leading organizations.</p>
+        <a href="mailto:support@apexconsulting-hash.com" class="cta-btn">Initiate Briefing</a>
     </header>
 
-    <div class="container">
-        
-       <section id="services">
-            <h2>Our Consulting Packages</h2>
-            <p style="color: #9e9e9e; margin-bottom: 25px;">Apex Consulting provides high-level corporate advisory, technical infrastructure oversight, and operational planning on a contract basis for small-to-midsize enterprises.</p>
-            
-            <div style="margin-bottom: 25px;">
-                <h3 style="color: #ffffff; margin-bottom: 5px; font-size: 1.1rem;">1. Business Operations & Workflow Auditing</h3>
-                <p style="color: #9e9e9e; font-size: 0.95rem; margin-bottom: 10px;">Comprehensive evaluation of current corporate operational hierarchies, software integration frameworks, and internal logistics to mitigate inefficiencies and lower daily overhead costs.</p>
+    <hr>
+
+    <main>
+        <section id="services" class="section-wrapper">
+            <div class="section-header">
+                <h2>Our Consulting Matrix</h2>
+                <p>Data-backed advisory workflows designed precisely to locate infrastructure gaps, eliminate redundancy, and maximize commercial output.</p>
             </div>
 
-            <div style="margin-bottom: 25px;">
-                <h3 style="color: #ffffff; margin-bottom: 5px; font-size: 1.1rem;">2. Technical Systems & Digital Infrastructure Management</h3>
-                <p style="color: #9e9e9e; font-size: 0.95rem; margin-bottom: 10px;">Advising corporate leadership on secure database migrations, localized IT hardware upgrades, software stack optimization, and cloud architecture implementation blueprints.</p>
-            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Corporate Glass Infrastructure" class="service-card-img">
+                    <div class="service-card-content">
+                        <h3>1. Operations Architecture & Automation Audits</h3>
+                        <p>We systematically map your current operational hierarchies and legacy business processes. By deploying modern automation workflows and eliminating communication logic dead-ends, we help scale your production efficiency while shrinking unnecessary daily operating expense margins.</p>
+                    </div>
+                </div>
 
-            <div style="margin-bottom: 25px;">
-                <h3 style="color: #ffffff; margin-bottom: 5px; font-size: 1.1rem;">3. Project Lifecycle Delivery & Management Advisory</h3>
-                <p style="color: #9e9e9e; font-size: 0.95rem; margin-bottom: 10px;">Directing internal cross-functional corporate teams through complex structural changes, maintaining project timelines, and ensuring rigorous milestone tracking.</p>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Tech Infrastructure Data Network" class="service-card-img">
+                    <div class="service-card-content">
+                        <h3>2. Digital Systems Stack Integration</h3>
+                        <p>High-level guidance on digital infrastructure modernization. Our advisory scope covers complex enterprise cloud migrations, corporate network security parameter implementation, centralized analytics dashboard building, and data silo management strategies engineered for growth.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" alt="Strategic Partnership Executive Meeting" class="service-card-img">
+                    <div class="service-card-content">
+                        <h3>3. Technical Project Lifecycle Oversight</h3>
+                        <p>Providing temporary steering control and master technical advisory for major cross-platform deployments. We align cross-functional tech teams, establish concrete milestone metrics, mitigate systemic delivery risks, and ensure complex software updates ship on time.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="process">
-            <h2>How We Engage & Bill</h2>
-            <p style="color: #9e9e9e; margin-bottom: 15px;">To ensure total clarity, we follow a rigorous client deployment roadmap:</p>
-            <ol>
-                <li>Initial comprehensive discovery briefing to anchor project goals.</li>
-                <li>Issuance of a formal, legally binding bilateral <strong>Statement of Work (SOW)</strong>.</li>
-                <li>Secure invoicing generated via Stripe exclusively matching agreed milestones or hours logged.</li>
-            </ol>
-            <div class="highlight-box">
-                <strong style="color: #e5c158;">Merchant Billing Information:</strong> All payments are safely handled securely via Stripe. Your financial or credit card statements will itemize charges explicitly under our registered merchant descriptor: <strong>APEXCONSULTING-HASH</strong>.
+        <hr>
+
+        <section id="process" class="section-wrapper">
+            <div class="section-header">
+                <h2>The Deployment Framework</h2>
+                <p>How we systematically onboard corporate accounts and manage deliverables with total clarity and zero operational confusion.</p>
             </div>
-        </section>
 
-        <section id="terms">
-            <h2>Terms & Refund Policy</h2>
-            <p style="color: #9e9e9e;"><strong>Refund Policy:</strong> Professional consultation services and logged project development architectures are non-refundable once delivered. In the event a signed agreement is paused or canceled prior to completion, the client is strictly liable only for hourly service outputs accrued up to the official electronic timestamp of structural termination.</p>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Apex Consulting. All rights reserved.</p>
-        <p style="margin-top: 5px; font-size: 0.8rem; color: #555;">Corporate Services Partner Network | Stripe Verified Integrator</p>
-    </footer>
-
-</body>
-</html>
+            <div class="process-row">
+                <div class="process-left">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
