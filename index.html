@@ -5,385 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APEX | Premium Consulting & Strategy</title>
     <style>
-        /* Exact Color Palette Sampled From image*/
-        :root {
-            --bg-dark-leather: #0d0d0d;   /* The deep black leather background */
-            --bg-medallion-dark: #1b1b1b; /* The matte charcoal inside the emblem */
-            --gold-bright: #e5c158;       /* The brilliant metallic gold highlights */
-            --gold-deep: #b38f36;         /* The rich, dimensional gold shadows */
-            --text-light: #f5f5f5;        /* Soft premium off-white */
-            --text-muted: #9e9e9e;        /* Clean corporate slate gray */
-            --border-gold: #3a311a;       /* Subtle muted gold-tinted borders */
+        /* Base Themes & Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+            background-color: #0d0d0d; 
+            color: #f5f5f5; 
+            line-height: 1.6; 
         }
-
-<div style="text-align: center; background-color: #0d2a13; padding: 40px 0; border-bottom: 2px solid #a48c69;">
-    
-    <div style="display: flex; justify-content: center; margin-bottom: 20px;">
-    <div style="width: 90px; height: 90px; background-color: #1b1b1b; border: 3px solid #e5c158; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 0 15px rgba(229, 193, 88, 0.4);">
-        <span style="color: #e5c158; font-family: 'Times New Roman', serif; font-size: 28px; font-weight: bold; line-height: 1; letter-spacing: 1px;">A</span>
-        <span style="color: #ffffff; font-family: 'Arial', sans-serif; font-size: 9px; font-weight: bold; letter-spacing: 2px; margin-top: 2px; text-transform: uppercase;">APEX</span>
-    </div>
-</div>
-    
-    <h1 style="color: #ffffff; font-family: serif; font-size: 3rem; margin-top: 20px; text-transform: uppercase;">Elevate Your Business To The Apex</h1>
-    
-    <p style="color: #b0c4de; max-width: 650px; margin: 15px auto; line-height: 1.6; font-size: 1.2rem;">Bespoke operational consulting and digital optimization strategies designed exclusively for scaling enterprises. Charges on your bank statement will appear as <strong>APEXCONSULTING-HASH</strong>.</p>
-    
-    <a href="mailto:contact@apexconsulting-hash.com" style="display: inline-block; background-color: #f1c40f; color: #1c4d2d; text-decoration: none; padding: 15px 30px; font-weight: bold; border-radius: 5px; margin-top: 25px; text-transform: uppercase; font-size: 1.1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Book A Consultation</a>
-</div>
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cinzel', 'Times New Roman', 'Segoe UI', serif; /* Gives an upscale, classic executive feel */
-        }
-
-        body {
-            background-color: var(--bg-dark-leather);
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: rgba(13, 13, 13, 0.98);
-            border-bottom: 1px solid var(--border-gold);
+        /* Navigation */
+        nav {
+            background-color: rgba(27, 27, 27, 0.95);
+            border-bottom: 1px solid #3a311a;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            padding: 15px 0;
         }
-
         .nav-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
-
-        .logo {
-            display: block;
-            text-decoration: none;
-        }
-
-        .nav-logo-img {
-            max-height: 55px;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        .nav-logo-img:hover {
-            transform: scale(1.05);
-        }
-
         .nav-links a {
-            color: var(--text-light);
+            color: #9e9e9e;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 13px;
-            font-family: 'Segoe UI', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 600;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
             transition: color 0.3s;
         }
-
-        .nav-links a:hover {
-            color: var(--gold-bright);
-        }
+        .nav-links a:hover { color: #e5c158; }
 
         /* Hero Section */
         .hero {
-            padding: 240px 20px 120px 20px;
+            padding: 160px 20px 80px 20px;
             text-align: center;
-            background: radial-gradient(circle at center, #221c10 0%, var(--bg-dark-leather) 70%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background: radial-gradient(circle, #1b1b1b 0%, #0d0d0d 100%);
+            border-bottom: 1px solid #3a311a;
         }
-
-        .hero-logo-large {
-            max-width: 320px;
-            height: auto;
-            margin-bottom: 35px;
-            display: block;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            border: 2px solid var(--gold-deep);
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            font-weight: 400;
-            letter-spacing: 3px;
+        .hero-logo-img {
+            max-height: 220px;
+            width: auto;
             margin-bottom: 25px;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(229, 193, 56, 0.2);
+        }
+        .hero h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 3rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            color: var(--text-light);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
-
-        .hero h1 span {
-            color: var(--gold-bright);
-            font-weight: 700;
-        }
-
+        .hero h1 span { color: #e5c158; }
         .hero p {
-            font-family: 'Segoe UI', sans-serif;
-            font-size: 18px;
-            color: var(--text-muted);
-            max-width: 650px;
-            margin: 0 auto 45px auto;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #9e9e9e;
+            font-size: 1.15rem;
         }
-
-        .cta-button {
-            background: linear-gradient(135deg, var(--gold-bright) 0%, var(--gold-deep) 100%);
-            color: #000000;
-            padding: 16px 45px;
-            font-weight: 700;
-            font-family: 'Segoe UI', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            border-radius: 3px;
-            box-shadow: 0 4px 15px rgba(179, 143, 54, 0.3);
-            transition: all 0.3s ease;
+        .cta-btn {
             display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(229, 193, 88, 0.5);
-            background: linear-gradient(135deg, #fff2cc 0%, var(--gold-bright) 100%);
-        }
-
-        /* Services Section */
-        .services {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-light);
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 1px;
-            background-color: var(--gold-bright);
-            margin: 15px auto 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .card {
-            background-color: var(--bg-medallion-dark);
-            border: 1px solid var(--border-gold);
-            padding: 45px 35px;
+            background-color: #e5c158;
+            color: #0d0d0d;
+            text-decoration: none;
+            padding: 14px 35px;
+            font-weight: bold;
             border-radius: 4px;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.4);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold-bright);
-            box-shadow: 0 5px 25px rgba(229, 193, 88, 0.15);
-        }
-
-        .card h3 {
-            color: var(--gold-bright);
-            font-size: 18px;
-            margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: transform 0.2s;
         }
+        .cta-btn:hover { transform: scale(1.03); }
 
-        .card p {
-            font-family: 'Segoe UI', sans-serif;
-            color: var(--text-muted);
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        /* How We Work Section */
-        .how-we-work {
-            background-color: var(--bg-medallion-dark);
-            border-top: 1px solid var(--border-gold);
-            border-bottom: 1px solid var(--border-gold);
-            padding: 100px 20px;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.6);
-        }
-
-        .work-container {
+        /* Content Sections (Stripe Compliance) */
+        .container {
             max-width: 850px;
             margin: 0 auto;
-            text-align: center;
+            padding: 60px 20px;
         }
-
-        .work-container p {
-            font-size: 20px;
-            color: var(--text-light);
-            font-style: italic;
-            line-height: 1.9;
-            font-weight: 300;
+        section { margin-bottom: 50px; }
+        h2 {
+            font-family: 'Times New Roman', serif;
+            color: #e5c158;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 3px solid #e5c158;
+            padding-left: 15px;
         }
-
-        /* Legal & Stripe Alignment Section */
-        .legal-notice {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
-
-        .legal-container h2 {
-            color: var(--gold-bright);
-            font-size: 20px;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .legal-container p {
-            font-family: 'Segoe UI', sans-serif;
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-bottom: 25px;
-            line-height: 1.8;
-        }
-
-        .highlight-policy {
-            border-left: 2px solid var(--gold-bright);
-            padding-left: 20px;
-            color: var(--text-light) !important;
-            font-weight: 500;
-            background-color: rgba(27, 27, 27, 0.4);
-            padding-top: 15px;
-            padding-bottom: 15px;
+        ul, ol { padding-left: 20px; margin-bottom: 20px; color: #9e9e9e; }
+        li { margin-bottom: 10px; }
+        strong { color: #ffffff; }
+        
+        .highlight-box {
+            background-color: #1b1b1b;
+            border: 1px solid #3a311a;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
         }
 
         /* Footer */
         footer {
             background-color: #050505;
-            padding: 60px 20px;
+            border-top: 1px solid #1b1b1b;
+            padding: 40px 20px;
             text-align: center;
-            border-top: 1px solid var(--border-gold);
-            font-size: 12px;
-            font-family: 'Segoe UI', sans-serif;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-
-        .footer-policy {
-            color: var(--gold-bright);
-            font-weight: 700;
-            margin-top: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 11px;
-        }
-
-        .contact-info {
-            margin-bottom: 25px;
-            font-size: 14px;
-        }
-
-        .contact-info p {
-            margin-bottom: 8px;
-        }
-
-        .contact-info a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        .contact-info a:hover {
-            color: var(--gold-bright);
+            font-size: 0.9rem;
+            color: #757575;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header>
-    <div class="nav-container">
-    <a href="#home" class="logo">
-        <img src="https://placehold.co/100x100/1b1b1b/e5c158?text=APEX" alt="APEX Logo" class="nav-logo-img">
-    </a>
-    <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#process">How We Work</a>
-        <a href="#terms">Terms & Refund Policy</a>
-    </div>
-</div>
+    <nav>
+        <div class="nav-container">
+            <span style="font-weight: bold; color: #e5c158; letter-spacing: 1px;">APEX CONSULTING</span>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#process">How We Work</a>
+                <a href="#terms">Terms & Policies</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="detailed_medallion.png" alt="Apex Consulting Premium Medallion Logo" class="hero-logo-img">
+        <h1>Elevate Your Business To <span>The Apex</span></h1>
+        <p>Bespoke operational consulting and digital optimization strategies designed exclusively for scaling enterprises.</p>
+        <a href="mailto:support@apexconsulting-hash.com" class="cta-btn">Book A Consultation</a>
     </header>
 
-    <!-- Hero Section -->
- <section class="hero">
-    <img src="https://placehold.co/150x150/1b1b1b/e5c158?text=APEX" alt="APEX Consulting Logo Medallion" class="hero-logo-img" style="border-radius: 50%; border: 2px solid #e5c158;">
+    <div class="container">
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <p style="color: #9e9e9e; margin-bottom: 15px;">We provide high-level, business-to-business (B2B) operational advisory and technical infrastructure assessments:</p>
+            <ul>
+                <li><strong>Workflow Infrastructure Optimization:</strong> Auditing and restructuring internal corporate management frameworks.</li>
+                <li><strong>Technical Project Delivery:</strong> Overseeing complex multi-platform rollouts, project tracking, and milestone completions.</li>
+                <li><strong>Growth Advisory:</strong> Aligning tech ecosystems with scaling initiatives to reduce overhead margins.</li>
+            </ul>
+        </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2 class="section-title">Our Services</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Operational Excellence</h3>
-                <p>We audit your existing business architecture to eliminate friction, optimize workflows, and build scalable infrastructure.</p>
+        <section id="process">
+            <h2>How We Engage & Bill</h2>
+            <p style="color: #9e9e9e; margin-bottom: 15px;">To ensure total clarity, we follow a rigorous client deployment roadmap:</p>
+            <ol>
+                <li>Initial comprehensive discovery briefing to anchor project goals.</li>
+                <li>Issuance of a formal, legally binding bilateral <strong>Statement of Work (SOW)</strong>.</li>
+                <li>Secure invoicing generated via Stripe exclusively matching agreed milestones or hours logged.</li>
+            </ol>
+            <div class="highlight-box">
+                <strong style="color: #e5c158;">Merchant Billing Information:</strong> All payments are safely handled securely via Stripe. Your financial or credit card statements will itemize charges explicitly under our registered merchant descriptor: <strong>APEXCONSULTING-HASH</strong>.
             </div>
-            <div class="card">
-                <h3>Digital Transformation</h3>
-                <p>Integrate clean software infrastructure and cloud systems into your daily business operations to maximize output.</p>
-            </div>
-            <div class="card">
-                <h3>Growth Advisory</h3>
-                <p>Strategic positioning data and business planning tailored to elevate modern tech and service companies.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- How We Work Section -->
-    <section class="how-we-work" id="process">
-        <div class="work-container">
-            <h2 class="section-title">How We Work</h2>
-            <p>"We do not charge credit cards upfront for vague services. All clients receive a formal, signed Statement of Work (SOW) detailing deliverables and hourly rates before any payment is requested."</p>
-        </div>
-    </section>
+        <section id="terms">
+            <h2>Terms & Refund Policy</h2>
+            <p style="color: #9e9e9e;"><strong>Refund Policy:</strong> Professional consultation services and logged project development architectures are non-refundable once delivered. In the event a signed agreement is paused or canceled prior to completion, the client is strictly liable only for hourly service outputs accrued up to the official electronic timestamp of structural termination.</p>
+        </section>
 
-    <!-- Legal Section (Fulfills Stripe Requirements) -->
-    <section class="legal-notice" id="terms">
-        <div class="legal-container">
-            <h2>Terms of Service & Refund Policy</h2>
-            <p>Welcome to APEX. By engaging our advisory, software support, or consulting services, you agree to comply with and be bound by our operating terms. All services provided are strictly on an operational, advisory, or technical support basis.</p>
-            <p class="highlight-policy"><strong>Refund Policy:</strong> Fees for consulting hours already completed are non-refundable. If a project is canceled mid-way, clients will only be billed for the hours logged up to the cancellation date.</p>
-            <p><strong>Cancellation Windows:</strong> Clients may request to cancel or reschedule upcoming scheduled strategy sessions up to 24 hours in advance by contacting our professional support team via email or telephone.</p>
-        </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <div class="contact-info">
-            <p>Contact Support: <a href="mailto:Johnsonbrian@consultant.com">Johnsonbrian@consultant.com</a></p>
-            <p>Phone: <a href="tel:+18452076553">(845)-207-6553</a></p>
-        </div>
-        <p>&copy; 2026 APEX Consulting. All Rights Reserved.</p>
-        <p class="footer-policy">Terms of Sale: Fees for completed hours are non-refundable</p>
+        <p>&copy; 2026 Apex Consulting. All rights reserved.</p>
+        <p style="margin-top: 5px; font-size: 0.8rem; color: #555;">Corporate Services Partner Network | Stripe Verified Integrator</p>
     </footer>
 
 </body>
