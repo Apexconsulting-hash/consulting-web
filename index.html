@@ -3,6 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX | Premium Consulting & Strategy</title>
+    <style>
+        /* Base Themes & Reset */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; 
+            background-color: #0d0d0d; 
+            color: #f5f5f5; 
+            line-height: 1.6; 
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: rgba(27, 27, 27, 0.95);
+            border-bottom: 1px solid #3a311a;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .nav-links a {
+            color: #9e9e9e;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: #e5c158; }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 20px 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle, #1b1b1b 0%, #0d0d0d 100%);
+            border-bottom: 1px solid #3a311a;
+        }
+        .hero-logo-img {
+            max-width: 320px; /* Increased size for a bolder look */
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            box-shadow: 0 0 35px rgba(229, 193, 56, 0.25);
+        }
+        .hero h1 {
+            font-family: 'Times New Roman', serif;
+            font-size: 3rem;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .hero h1 span { color: #e5c158; }
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            color: #9e9e9e;
+            font-size: 1.15rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: #e5c158;
+            color: #0d0d0d;
+            text-decoration: none;
+            padding: 14px 35px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.2s;
+        }
+        .cta-btn:hover { transform: scale(1.03); }
+
+        /* Content Sections (Stripe Compliance) */
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        section { margin-bottom: 50px; }
+        h2 {
+            font-family: 'Times New Roman', serif;
+            color: #e5c158;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 3px solid #e5c158;
+            padding-left: 15px;
+        }
+        ul, ol { padding-left: 20px; margin-bottom: 20px; color: #9e9e9e; }
+        li { margin-bottom: 10px; }
+        strong { color: #ffffff; }
+        
+        .highlight-box {
+            background-color: #1b1b1b;
+            border: 1px solid #3a311a;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            border-top: 1px solid #1b1b1b;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #757575;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <span style="font-weight: bold; color: #e5c158; letter-spacing: 1px;">APEX CONSULTING</span>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#process">How We Work</a>
+                <a href="#terms">Terms & Policies</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <img src="detailed_medallion.jpeg" alt="Apex Consulting Premium Medallion Logo" class="hero-logo-img">
+        <h1>Elevate Your Business To <span>The Apex</span></h1>
+        <p>Bespoke operational consulting and digital optimization strategies designed exclusively for scaling enterprises.</p>
+        <a href="mailto:support@apexconsulting-hash.com" class="cta-btn">Book A Consultation</a>
+    </header>
+
+    <div class="container">
+        
+        <section id="services">
+            <h2>Our Services</h2>
+            <p style="color: #9e9e9e; margin-bottom: 15px;">We provide high-level, business-to-business (B2B) operational advisory and technical infrastructure assessments:</p>
+            <ul>
+                <li><strong>Workflow Infrastructure Optimization:</strong> Auditing and restructuring internal corporate management frameworks.</li>
+                <li><strong>Technical Project Delivery:</strong> Overseeing complex multi-platform rollouts, project tracking, and milestone completions.</li>
+                <li><strong>Growth Advisory:</strong> Aligning tech ecosystems with scaling initiatives to reduce overhead margins.</li>
+            </ul>
+        </section>
+
+        <section id="process">
+            <h2>How We Engage & Bill</h2>
+            <p style="color: #9e9e9e; margin-bottom: 15px;">To ensure total clarity, we follow a rigorous client deployment roadmap:</p>
+            <ol>
+                <li>Initial comprehensive discovery briefing to anchor project goals.</li>
+                <li>Issuance of a formal, legally binding bilateral <strong>Statement of Work (SOW)</strong>.</li>
+                <li>Secure invoicing generated via Stripe exclusively matching agreed milestones or hours logged.</li>
+            </ol>
+            <div class="highlight-box">
+                <strong style="color: #e5c158;">Merchant Billing Information:</strong> All payments are safely handled securely via Stripe. Your financial or credit card statements will itemize charges explicitly under our registered merchant descriptor: <strong>APEXCONSULTING-HASH</strong>.
+            </div>
+        </section>
+
+        <section id="terms">
+            <h2>Terms & Refund Policy</h2>
+            <p style="color: #9e9e9e;"><strong>Refund Policy:</strong> Professional consultation services and logged project development architectures are non-refundable once delivered. In the event a signed agreement is paused or canceled prior to completion, the client is strictly liable only for hourly service outputs accrued up to the official electronic timestamp of structural termination.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Apex Consulting. All rights reserved.</p>
+        <p style="margin-top: 5px; font-size: 0.8rem; color: #555;">Corporate Services Partner Network | Stripe Verified Integrator</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex Consulting | Enterprise Operations</title>
     <style>
         /* Base Themes & Reset */
